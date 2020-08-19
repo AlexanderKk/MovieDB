@@ -1,0 +1,265 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="MovieDB.MainWindow" BaseTypeListCollapsed="true">
+    <Position X="4" Y="9" Width="1.5" />
+    <AssociationLine Name="User" Type="MovieDB.model.Users" ManuallyRouted="true">
+      <Path>
+        <Point X="5.5" Y="10.419" />
+        <Point X="5.75" Y="10.419" />
+        <Point X="5.75" Y="14.9" />
+        <Point X="7.323" Y="14.9" Type="JumpStart" />
+        <Point X="7.49" Y="14.9" Type="JumpEnd" />
+        <Point X="7.667" Y="14.9" Type="JumpStart" />
+        <Point X="7.833" Y="14.9" Type="JumpEnd" />
+        <Point X="8.667" Y="14.9" Type="JumpStart" />
+        <Point X="8.833" Y="14.9" Type="JumpEnd" />
+        <Point X="9.667" Y="14.9" Type="JumpStart" />
+        <Point X="9.833" Y="14.9" Type="JumpEnd" />
+        <Point X="10.462" Y="14.9" Type="JumpStart" />
+        <Point X="10.628" Y="14.9" Type="JumpEnd" />
+        <Point X="10.965" Y="14.9" />
+        <Point X="10.965" Y="17" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAARAAIAAAAAAAAAAAAAAABAAAAAAAAAAIgQAAAAIAA=</HashCode>
+      <FileName>MainWindow.xaml.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="User" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="MovieDB.Registration" BaseTypeListCollapsed="true">
+    <Position X="2" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAEAgAAAAggAAAAAEAAAAAAIgAAAACCAAAQAIACAgA=</HashCode>
+      <FileName>Registration.xaml.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="unit" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="MovieDB.model.Attachments">
+    <Position X="13" Y="17" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAACIEAAAAgAAAABAAAAAEAAggAAAAAAACAQAAgAA=</HashCode>
+      <FileName>model\Attachments.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MovieDB.model.Context">
+    <Position X="5" Y="20.25" Width="1.5" />
+    <AssociationLine Name="films" Type="MovieDB.model.Films" ManuallyRouted="true">
+      <Path>
+        <Point X="6.5" Y="20.798" />
+        <Point X="10.917" Y="20.798" Type="JumpStart" />
+        <Point X="11.083" Y="20.798" Type="JumpEnd" />
+        <Point X="13.635" Y="20.798" Type="JumpStart" />
+        <Point X="13.802" Y="20.798" Type="JumpEnd" />
+        <Point X="15.5" Y="20.798" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAQAAAAAAAAAAAAAAEAAAAAAAAACAAAAAAAA=</HashCode>
+      <FileName>model\Context.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Users" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="films" />
+      <Property Name="attachments" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="MovieDB.model.Films">
+    <Position X="15.5" Y="17" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACABAABAACAEEAAIIAAAIAAAIAAAEAgABAAAAACAA=</HashCode>
+      <FileName>model\Films.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MovieDB.model.Repository&lt;TEntity&gt;" BaseTypeListCollapsed="true">
+    <Position X="5.75" Y="16" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAABABAAAAAJAAAAAABAEAAAAAAAAAAAAA=</HashCode>
+      <FileName>model\unitOfWork\Repository.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_context" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="MovieDB.model.UnitOfWork" BaseTypeListCollapsed="true">
+    <Position X="3.25" Y="16" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAKAAACAQAAEAAAAAAAIAAAAAAAAAIAAAAAAQgAA=</HashCode>
+      <FileName>model\unitOfWork\UnitOfWork.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="attachRepository" />
+      <Field Name="db" />
+      <Field Name="usersRepository" />
+      <Field Name="filmsRepository" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="MovieDB.model.Users">
+    <Position X="10.25" Y="17" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAADAAAAACAgAAEAAAAAAIQABAAAABACAAAAIAAAAAA=</HashCode>
+      <FileName>model\Users.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MovieDB.pages.MainPage" BaseTypeListCollapsed="true">
+    <Position X="6" Y="9" Width="1.5" />
+    <AssociationLine Name="attach" Type="MovieDB.model.Attachments" ManuallyRouted="true">
+      <Path>
+        <Point X="7.5" Y="11.381" />
+        <Point X="7.75" Y="11.381" />
+        <Point X="7.75" Y="16.055" />
+        <Point X="8.667" Y="16.055" Type="JumpStart" />
+        <Point X="8.833" Y="16.055" Type="JumpEnd" />
+        <Point X="9.667" Y="16.055" Type="JumpStart" />
+        <Point X="9.833" Y="16.055" Type="JumpEnd" />
+        <Point X="10.462" Y="16.055" Type="JumpStart" />
+        <Point X="10.628" Y="16.055" Type="JumpEnd" />
+        <Point X="10.882" Y="16.055" Type="JumpStart" />
+        <Point X="11.048" Y="16.055" Type="JumpEnd" />
+        <Point X="11.792" Y="16.055" Type="JumpStart" />
+        <Point X="11.958" Y="16.055" Type="JumpEnd" />
+        <Point X="13.026" Y="16.055" Type="JumpStart" />
+        <Point X="13.193" Y="16.055" Type="JumpEnd" />
+        <Point X="14.156" Y="16.055" />
+        <Point X="14.156" Y="17" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>ACAQAAACAAACAAAAAAAQACAABAAAACCAQQAAAEAA4TA=</HashCode>
+      <FileName>pages\MainPage.xaml.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="user" />
+      <Field Name="attach" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="MovieDB.pages.ProfilePage" BaseTypeListCollapsed="true">
+    <Position X="8" Y="9" Width="1.5" />
+    <AssociationLine Name="attach" Type="MovieDB.model.Attachments" ManuallyRouted="true">
+      <Path>
+        <Point X="9.5" Y="11.092" />
+        <Point X="9.75" Y="11.092" />
+        <Point X="9.75" Y="16.576" />
+        <Point X="10.462" Y="16.576" Type="JumpStart" />
+        <Point X="10.628" Y="16.576" Type="JumpEnd" />
+        <Point X="10.882" Y="16.576" Type="JumpStart" />
+        <Point X="11.048" Y="16.576" Type="JumpEnd" />
+        <Point X="13.026" Y="16.576" Type="JumpStart" />
+        <Point X="13.193" Y="16.576" Type="JumpEnd" />
+        <Point X="13.26" Y="16.576" Type="JumpStart" />
+        <Point X="13.427" Y="16.576" Type="JumpEnd" />
+        <Point X="13.75" Y="16.576" />
+        <Point X="13.75" Y="17" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAAQAAAAgABAAAAAAQYAIAAECAAQAAgCAAARE=</HashCode>
+      <FileName>pages\ProfilePage.xaml.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="user" />
+      <Field Name="attach" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="MovieDB.userControl.Comment" BaseTypeListCollapsed="true">
+    <Position X="16" Y="12.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAgAAAAACAAAAAAAAAAAAAAAAAQAAAAQAgA=</HashCode>
+      <FileName>userControl\Comment.xaml.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="film" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="MovieDB.userControl.FilmInfo" BaseTypeListCollapsed="true">
+    <Position X="14" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAIAAAgA=</HashCode>
+      <FileName>userControl\FilmInfo.xaml.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="film" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="MovieDB.userControl.FilmItem" BaseTypeListCollapsed="true">
+    <Position X="12" Y="9" Width="1.5" />
+    <AssociationLine Name="film" Type="MovieDB.model.Films" ManuallyRouted="true">
+      <Path>
+        <Point X="12.469" Y="15.3" />
+        <Point X="12.469" Y="15.73" />
+        <Point X="13.026" Y="15.73" Type="JumpStart" />
+        <Point X="13.193" Y="15.73" Type="JumpEnd" />
+        <Point X="14.757" Y="15.73" />
+        <Point X="14.757" Y="20.403" />
+        <Point X="15.014" Y="20.403" Type="JumpStart" />
+        <Point X="15.181" Y="20.403" Type="JumpEnd" />
+        <Point X="15.5" Y="20.403" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAADAQAAAACAIBAAiEAEEAgAAAQAQASAAAQAAAQIQgI=</HashCode>
+      <FileName>userControl\FilmItem.xaml.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="film" />
+      <Field Name="attach" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="MovieDB.userControl.ShortInfo" BaseTypeListCollapsed="true">
+    <Position X="16" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAAAAAAAAAAAAEAEAAAAAAAAAAAAQAAIAAAgA=</HashCode>
+      <FileName>userControl\ShortInfo.xaml.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="film" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="MovieDB.userControl.StatisticsControl" BaseTypeListCollapsed="true">
+    <Position X="10" Y="9" Width="1.5" />
+    <AssociationLine Name="Attach" Type="MovieDB.model.Attachments" ManuallyRouted="true">
+      <Path>
+        <Point X="11.5" Y="10.26" />
+        <Point X="11.875" Y="10.26" />
+        <Point X="11.875" Y="16.337" />
+        <Point X="13.026" Y="16.337" Type="JumpStart" />
+        <Point X="13.193" Y="16.337" Type="JumpEnd" />
+        <Point X="13.344" Y="16.337" />
+        <Point X="13.344" Y="17" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>BAABAQAAAAAAgAAAAAAAAAAAAIAAgAAAAAAAAAAAAAA=</HashCode>
+      <FileName>userControl\StatisticsControl.xaml.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="Attach" />
+      <Field Name="User" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Interface Name="MovieDB.model.IRepository&lt;TEntity&gt;">
+    <Position X="2.5" Y="19" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAABAAAAABAAAAAABAEAAAAAAAAAAAAA=</HashCode>
+      <FileName>model\unitOfWork\IRepository.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

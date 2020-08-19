@@ -1,0 +1,533 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{44A61DE5-2D1E-468F-B4E3-A7699AE235BA}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>MovieDB</RootNamespace>
+    <AssemblyName>MovieDB</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.2\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.2\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="MaterialDesignColors, Version=1.2.2.920, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaterialDesignColors.1.2.2\lib\net45\MaterialDesignColors.dll</HintPath>
+    </Reference>
+    <Reference Include="MaterialDesignThemes.Wpf, Version=3.0.1.920, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaterialDesignThemes.3.0.1\lib\net45\MaterialDesignThemes.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="OxyPlot, Version=1.0.0.0, Culture=neutral, PublicKeyToken=638079a8f0bd61e9, processorArchitecture=MSIL">
+      <HintPath>..\packages\OxyPlot.Core.1.0.0\lib\net45\OxyPlot.dll</HintPath>
+    </Reference>
+    <Reference Include="OxyPlot.Wpf, Version=1.0.0.0, Culture=neutral, PublicKeyToken=75e952ba404cdbb0, processorArchitecture=MSIL">
+      <HintPath>..\packages\OxyPlot.Wpf.1.0.0\lib\net45\OxyPlot.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="Migrations\202004121157577_AddFilmTitle.cs" />
+    <Compile Include="Migrations\202004121157577_AddFilmTitle.designer.cs">
+      <DependentUpon>202004121157577_AddFilmTitle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202004121523190_AddFilmCategory.cs" />
+    <Compile Include="Migrations\202004121523190_AddFilmCategory.designer.cs">
+      <DependentUpon>202004121523190_AddFilmCategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202004221047549_AddFilmImage.cs" />
+    <Compile Include="Migrations\202004221047549_AddFilmImage.designer.cs">
+      <DependentUpon>202004221047549_AddFilmImage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202004231504560_AddFilmInfo.cs" />
+    <Compile Include="Migrations\202004231504560_AddFilmInfo.designer.cs">
+      <DependentUpon>202004231504560_AddFilmInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202004231605473_AddInfo.cs" />
+    <Compile Include="Migrations\202004231605473_AddInfo.designer.cs">
+      <DependentUpon>202004231605473_AddInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202004231919469_AddFilmFilePath.cs" />
+    <Compile Include="Migrations\202004231919469_AddFilmFilePath.designer.cs">
+      <DependentUpon>202004231919469_AddFilmFilePath.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202004232129259_AddFilmRating.cs" />
+    <Compile Include="Migrations\202004232129259_AddFilmRating.designer.cs">
+      <DependentUpon>202004232129259_AddFilmRating.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202004232138157_AddInfo1.cs" />
+    <Compile Include="Migrations\202004232138157_AddInfo1.designer.cs">
+      <DependentUpon>202004232138157_AddInfo1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202004232139347_AddFilmRating2.cs" />
+    <Compile Include="Migrations\202004232139347_AddFilmRating2.designer.cs">
+      <DependentUpon>202004232139347_AddFilmRating2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202004241152084_AddFilmDescription.cs" />
+    <Compile Include="Migrations\202004241152084_AddFilmDescription.designer.cs">
+      <DependentUpon>202004241152084_AddFilmDescription.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202004241301416_AddFilmView.cs" />
+    <Compile Include="Migrations\202004241301416_AddFilmView.designer.cs">
+      <DependentUpon>202004241301416_AddFilmView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202004241305130_DeleteInfo.cs" />
+    <Compile Include="Migrations\202004241305130_DeleteInfo.designer.cs">
+      <DependentUpon>202004241305130_DeleteInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202004241306378_AddFilmCheckView.cs" />
+    <Compile Include="Migrations\202004241306378_AddFilmCheckView.designer.cs">
+      <DependentUpon>202004241306378_AddFilmCheckView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202004241952396_AddFilmStar.cs" />
+    <Compile Include="Migrations\202004241952396_AddFilmStar.designer.cs">
+      <DependentUpon>202004241952396_AddFilmStar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202004242043136_UpdateInfoFilm.cs" />
+    <Compile Include="Migrations\202004242043136_UpdateInfoFilm.designer.cs">
+      <DependentUpon>202004242043136_UpdateInfoFilm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202004252027476_Change.cs" />
+    <Compile Include="Migrations\202004252027476_Change.designer.cs">
+      <DependentUpon>202004252027476_Change.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202004252031010_AddChange.cs" />
+    <Compile Include="Migrations\202004252031010_AddChange.designer.cs">
+      <DependentUpon>202004252031010_AddChange.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202004260853119_ChangeInfo.cs" />
+    <Compile Include="Migrations\202004260853119_ChangeInfo.designer.cs">
+      <DependentUpon>202004260853119_ChangeInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202004260901418_ChangeInfo2.cs" />
+    <Compile Include="Migrations\202004260901418_ChangeInfo2.designer.cs">
+      <DependentUpon>202004260901418_ChangeInfo2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202004260911035_AddTable.cs" />
+    <Compile Include="Migrations\202004260911035_AddTable.designer.cs">
+      <DependentUpon>202004260911035_AddTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202004260920180_AdDAttachmentsInfo.cs" />
+    <Compile Include="Migrations\202004260920180_AdDAttachmentsInfo.designer.cs">
+      <DependentUpon>202004260920180_AdDAttachmentsInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202004261013069_ChangeInfo1.cs" />
+    <Compile Include="Migrations\202004261013069_ChangeInfo1.designer.cs">
+      <DependentUpon>202004261013069_ChangeInfo1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202004261027461_AddRelations.cs" />
+    <Compile Include="Migrations\202004261027461_AddRelations.designer.cs">
+      <DependentUpon>202004261027461_AddRelations.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202004261029564_Info.cs" />
+    <Compile Include="Migrations\202004261029564_Info.designer.cs">
+      <DependentUpon>202004261029564_Info.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202004261033043_Relations.cs" />
+    <Compile Include="Migrations\202004261033043_Relations.designer.cs">
+      <DependentUpon>202004261033043_Relations.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202004261043069_Relations2.cs" />
+    <Compile Include="Migrations\202004261043069_Relations2.designer.cs">
+      <DependentUpon>202004261043069_Relations2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202004261057040_ForeignKey.cs" />
+    <Compile Include="Migrations\202004261057040_ForeignKey.designer.cs">
+      <DependentUpon>202004261057040_ForeignKey.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202004261104465_FilmId.cs" />
+    <Compile Include="Migrations\202004261104465_FilmId.designer.cs">
+      <DependentUpon>202004261104465_FilmId.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202004261107291_UserID.cs" />
+    <Compile Include="Migrations\202004261107291_UserID.designer.cs">
+      <DependentUpon>202004261107291_UserID.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202004261110510_UsersId.cs" />
+    <Compile Include="Migrations\202004261110510_UsersId.designer.cs">
+      <DependentUpon>202004261110510_UsersId.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202004270907513_AddComment.cs" />
+    <Compile Include="Migrations\202004270907513_AddComment.designer.cs">
+      <DependentUpon>202004270907513_AddComment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202004271719570_AddCommentTime.cs" />
+    <Compile Include="Migrations\202004271719570_AddCommentTime.designer.cs">
+      <DependentUpon>202004271719570_AddCommentTime.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202004280948028_AddUserImage.cs" />
+    <Compile Include="Migrations\202004280948028_AddUserImage.designer.cs">
+      <DependentUpon>202004280948028_AddUserImage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202004281844409_Info1.cs" />
+    <Compile Include="Migrations\202004281844409_Info1.Designer.cs">
+      <DependentUpon>202004281844409_Info1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202004301205409_AddFavoriteFilm.cs" />
+    <Compile Include="Migrations\202004301205409_AddFavoriteFilm.Designer.cs">
+      <DependentUpon>202004301205409_AddFavoriteFilm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202005212045598_Update.cs" />
+    <Compile Include="Migrations\202005212045598_Update.Designer.cs">
+      <DependentUpon>202005212045598_Update.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202005230918164_relation.cs" />
+    <Compile Include="Migrations\202005230918164_relation.Designer.cs">
+      <DependentUpon>202005230918164_relation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202005241408097_С.cs" />
+    <Compile Include="Migrations\202005241408097_С.Designer.cs">
+      <DependentUpon>202005241408097_С.cs</DependentUpon>
+    </Compile>
+    <Compile Include="model\Attachments.cs" />
+    <Compile Include="model\Films.cs" />
+    <Compile Include="userControl\Comment.xaml.cs">
+      <DependentUpon>Comment.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="userControl\FilmInfo.xaml.cs">
+      <DependentUpon>FilmInfo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="userControl\FilmItem.xaml.cs">
+      <DependentUpon>FilmItem.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="userControl\ShortInfo.xaml.cs">
+      <DependentUpon>ShortInfo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="userControl\StatisticsControl.xaml.cs">
+      <DependentUpon>StatisticsControl.xaml</DependentUpon>
+    </Compile>
+    <Page Include="MainWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="pages\ProfilePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="pages\MainPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Registration.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202004051038465_AddUserEmail.cs" />
+    <Compile Include="Migrations\202004051038465_AddUserEmail.designer.cs">
+      <DependentUpon>202004051038465_AddUserEmail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202004051204021_AddUserUser.cs" />
+    <Compile Include="Migrations\202004051204021_AddUserUser.designer.cs">
+      <DependentUpon>202004051204021_AddUserUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202004111538510_AddUserDescription.cs" />
+    <Compile Include="Migrations\202004111538510_AddUserDescription.designer.cs">
+      <DependentUpon>202004111538510_AddUserDescription.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202004111556128_AddUserPhone.cs" />
+    <Compile Include="Migrations\202004111556128_AddUserPhone.designer.cs">
+      <DependentUpon>202004111556128_AddUserPhone.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="model\Context.cs" />
+    <Compile Include="model\unitOfWork\IRepository.cs" />
+    <Compile Include="model\unitOfWork\UnitOfWork.cs" />
+    <Compile Include="model\unitOfWork\Repository.cs" />
+    <Compile Include="model\Users.cs" />
+    <Compile Include="pages\ProfilePage.xaml.cs">
+      <DependentUpon>ProfilePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="pages\MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Registration.xaml.cs">
+      <DependentUpon>Registration.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="resources\langs\lang_EN.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="resources\langs\lang_RU.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="resources\themes\BWTheme.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="resources\themes\GreenTheme.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="userControl\Comment.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="userControl\FilmInfo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="userControl\FilmItem.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="userControl\ShortInfo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="userControl\StatisticsControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Migrations\202004051038465_AddUserEmail.resx">
+      <DependentUpon>202004051038465_AddUserEmail.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004051204021_AddUserUser.resx">
+      <DependentUpon>202004051204021_AddUserUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004111538510_AddUserDescription.resx">
+      <DependentUpon>202004111538510_AddUserDescription.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004111556128_AddUserPhone.resx">
+      <DependentUpon>202004111556128_AddUserPhone.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004121157577_AddFilmTitle.resx">
+      <DependentUpon>202004121157577_AddFilmTitle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004121523190_AddFilmCategory.resx">
+      <DependentUpon>202004121523190_AddFilmCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004221047549_AddFilmImage.resx">
+      <DependentUpon>202004221047549_AddFilmImage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004231504560_AddFilmInfo.resx">
+      <DependentUpon>202004231504560_AddFilmInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004231605473_AddInfo.resx">
+      <DependentUpon>202004231605473_AddInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004231919469_AddFilmFilePath.resx">
+      <DependentUpon>202004231919469_AddFilmFilePath.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004232129259_AddFilmRating.resx">
+      <DependentUpon>202004232129259_AddFilmRating.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004232138157_AddInfo1.resx">
+      <DependentUpon>202004232138157_AddInfo1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004232139347_AddFilmRating2.resx">
+      <DependentUpon>202004232139347_AddFilmRating2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004241152084_AddFilmDescription.resx">
+      <DependentUpon>202004241152084_AddFilmDescription.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004241301416_AddFilmView.resx">
+      <DependentUpon>202004241301416_AddFilmView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004241305130_DeleteInfo.resx">
+      <DependentUpon>202004241305130_DeleteInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004241306378_AddFilmCheckView.resx">
+      <DependentUpon>202004241306378_AddFilmCheckView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004241952396_AddFilmStar.resx">
+      <DependentUpon>202004241952396_AddFilmStar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004242043136_UpdateInfoFilm.resx">
+      <DependentUpon>202004242043136_UpdateInfoFilm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004252027476_Change.resx">
+      <DependentUpon>202004252027476_Change.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004252031010_AddChange.resx">
+      <DependentUpon>202004252031010_AddChange.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004260853119_ChangeInfo.resx">
+      <DependentUpon>202004260853119_ChangeInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004260901418_ChangeInfo2.resx">
+      <DependentUpon>202004260901418_ChangeInfo2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004260911035_AddTable.resx">
+      <DependentUpon>202004260911035_AddTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004260920180_AdDAttachmentsInfo.resx">
+      <DependentUpon>202004260920180_AdDAttachmentsInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004261013069_ChangeInfo1.resx">
+      <DependentUpon>202004261013069_ChangeInfo1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004261027461_AddRelations.resx">
+      <DependentUpon>202004261027461_AddRelations.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004261029564_Info.resx">
+      <DependentUpon>202004261029564_Info.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004261033043_Relations.resx">
+      <DependentUpon>202004261033043_Relations.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004261043069_Relations2.resx">
+      <DependentUpon>202004261043069_Relations2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004261057040_ForeignKey.resx">
+      <DependentUpon>202004261057040_ForeignKey.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004261104465_FilmId.resx">
+      <DependentUpon>202004261104465_FilmId.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004261107291_UserID.resx">
+      <DependentUpon>202004261107291_UserID.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004261110510_UsersId.resx">
+      <DependentUpon>202004261110510_UsersId.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004270907513_AddComment.resx">
+      <DependentUpon>202004270907513_AddComment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004271719570_AddCommentTime.resx">
+      <DependentUpon>202004271719570_AddCommentTime.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004280948028_AddUserImage.resx">
+      <DependentUpon>202004280948028_AddUserImage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004281844409_Info1.resx">
+      <DependentUpon>202004281844409_Info1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004301205409_AddFavoriteFilm.resx">
+      <DependentUpon>202004301205409_AddFavoriteFilm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202005212045598_Update.resx">
+      <DependentUpon>202005212045598_Update.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202005230918164_relation.resx">
+      <DependentUpon>202005230918164_relation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202005241408097_С.resx">
+      <DependentUpon>202005241408097_С.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="ClassDiagram2.cd" />
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="resources\poster\2.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="resources\profile\photo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="resources\icon\icon.ico" />
+    <Resource Include="resources\poster\The_Green_Mile.jpg" />
+    <Resource Include="resources\poster\tonet.jpg" />
+    <Resource Include="resources\poster\forest_gamp.jpg" />
+    <Resource Include="resources\poster\fight_club.jpg" />
+    <Resource Include="resources\poster\snatch.jpg" />
+    <Resource Include="resources\icon\icon5.png" />
+    <Resource Include="resources\icon\icon4.png" />
+    <Resource Include="resources\icon\icon3.jpg" />
+    <Resource Include="resources\icon\icon2.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\MaterialDesignThemes.3.0.1\build\MaterialDesignThemes.targets" Condition="Exists('..\packages\MaterialDesignThemes.3.0.1\build\MaterialDesignThemes.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Данный проект ссылается на пакеты NuGet, отсутствующие на этом компьютере. Используйте восстановление пакетов NuGet, чтобы скачать их.  Дополнительную информацию см. по адресу: http://go.microsoft.com/fwlink/?LinkID=322105. Отсутствует следующий файл: {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\MaterialDesignThemes.3.0.1\build\MaterialDesignThemes.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\MaterialDesignThemes.3.0.1\build\MaterialDesignThemes.targets'))" />
+  </Target>
+</Project>
